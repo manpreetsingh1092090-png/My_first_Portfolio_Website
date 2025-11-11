@@ -26,12 +26,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  box-shadow: 0 0 10px rgba(255, 51, 204, 0.3);
+  /* box-shadow: 0 0 10px rgba(255, 51, 204, 0.3); */
   transition: 0.3s ease;
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: 1px;
@@ -149,20 +149,26 @@ nav a:hover {
   animation: fadeUp 1.5s ease-in-out;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
+.h1 {
+  font-size: 2.4rem;
 }
 
-.gradient-text {
-  background: linear-gradient(90deg, #ff99dd, #b37bff);
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: glowText 3s ease-in-out infinite alternate;
+@media (max-width: 600px) {
+  .h1 {
+  font-size: 1.6rem;
+}
 }
 
-@keyframes glowText {
-  from { text-shadow: 0 0 5px #ff99dd; }
-  to { text-shadow: 0 0 20px #b37bff; }
+@media (max-width: 600px) {
+  .tagline  {
+  font-size: 0.9rem;
+}
+}
+
+@media (max-width: 600px) {
+  .btn-glow  {
+  font-size: 0.8rem;
+}
 }
 
 .subtitle {
@@ -180,6 +186,7 @@ nav a:hover {
   font-weight: 600;
   transition: all 0.4s ease;
 }
+
 .btn-glow:hover {
   /* box-shadow: 0 0 25px #aa00ff; */
   transform: scale(1.05);
@@ -252,12 +259,16 @@ nav a:hover {
   margin-top: 10px;
   padding: 8px 20px;
   border-radius: 25px;
-  background: linear-gradient(90deg, #ff99dd, #b37bff);
-  color: white;
+  /* background: linear-gradient(90deg, #ff99dd, #b37bff); */
+  background-color: rgb(255, 86, 168);
+  color: black;
   text-decoration: none;
   transition: 0.3s;
 }
-.btn-small:hover { box-shadow: 0 0 15px #ff99dd; }
+.btn-small:hover { 
+  box-shadow: 0 0 15px #e431ff;
+  color: white;
+}
 
 /* Footer */
 footer {
