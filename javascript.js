@@ -6,23 +6,27 @@ const navLinks = document.querySelectorAll("nav a");
 const reveal = () => {
   revealElements.forEach(el => {
     const top = el.getBoundingClientRect().top;
+    console.log(top);
     if (top < window.innerHeight * 0.85) el.classList.add('show');
   });
 };
 window.addEventListener('scroll', reveal);
 reveal();
+
 // Typing animation with glow effect
 const textEl = document.getElementById("subtitle");
 const phrases = [
   "A Web Developer",
+  "A 12th Grade Student",
   "A LifeLong Learner",
   "A Future Software Engineer",
   "A Future AI Engineer",
-  "A 12th Grade Student"
+  "A 12th Grade Student",
+  "A Master Builder!"
 ];
 
 let i = 0, j = 0, isDeleting = false;
-const typeSpeed = 100, deleteSpeed = 50, delay = 2000;
+const typeSpeed = 100, deleteSpeed = 60, delay = 2000;
 
 function type() {
   const fullPhrase = phrases[i];
