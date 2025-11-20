@@ -6,7 +6,6 @@ const navLinks = document.querySelectorAll("nav a");
 const reveal = () => {
   revealElements.forEach(el => {
     const top = el.getBoundingClientRect().top;
-    console.log(top);
     if (top < window.innerHeight * 0.85) el.classList.add('show');
   });
 };
